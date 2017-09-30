@@ -1,0 +1,208 @@
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+
+body a{
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+}
+html, body{
+    font-size: 100%;
+	font-family: 'Roboto', sans-serif;
+}
+body{
+  padding-top: 50px;
+  background-color: #222222;
+}
+.banner{
+	background: url(../images/3.jpg) no-repeat 0px 0px;
+  background-size: cover;
+}
+.jarallax {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+/*--slider--*/
+.callbacks {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.callbacks img {
+  position: relative;
+  z-index: 1;
+  height: auto;
+  border: 0;
+}
+.callbacks{
+	display: block;
+	position: absolute;
+	z-index: 2;
+	font-size: 20px;
+	text-shadow: none;
+	color: #fff;
+	left: 0;
+	right: 0;
+	padding: 10px 20px;
+	margin: 0;
+	max-width: none;
+	top: 10%;
+	text-align: center;
+}
+.rslides {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+.rslides img {
+  height: auto;
+  border: 0;
+  max-width: 100%;
+  max-height: 100%;
+  }
+/*-- //slider --*/
+/*-- banner-main --*/
+.banner-main {
+  padding: 4em 0 4em 0;
+}
+/*-- //banner-main --*/
+/*-- new_container --*/
+.new_container {
+  padding-right: 1em;
+  padding-left: 1em;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .new_container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .new_container {
+    width: 860px;
+  }
+}
+/*-- //new_container --*/
+/*  */
+.view img {
+ display: block;
+ position: relative;
+ margin:auto;
+}
+/*  */
+
+/*-- main --*/
+.main {
+  padding: 2em;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+/*-- //main --*/
+
+/* marketing */
+.marketing .placeholder {
+  margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 4em;
+}
+.marketing h2,h3,h5 {
+  font-weight: normal;
+  color:#D8D8D8;
+}
+
+.marketing .placeholder p {
+  margin-right: 10px;
+  margin-left: 10px;
+  color:#D8D8D8;
+  font-weight: lighter;
+}
+/* //marketing */
+
+/*-- team --*/
+.team{
+	background:url(../images/bg.jpg) no-repeat 0px 0px;
+	background-size:cover;
+}
+.team-dot {
+    background: url(../images/dott.png)repeat 0px 0px;
+    background-size: 2px;
+    -webkit-background-size: 2px;
+    -moz-background-size: 2px;
+    -o-background-size: 2px;
+    -ms-background-size: 2px;
+}
+/* --//team-- */
+/*  */
+.contact-info{
+  background: url(../images/3.jpg) no-repeat 0px 0px;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+}
+.contact-info-grids:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: rgba(3, 169, 244, 0.76);
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+/*  */
+
+/*Placeholder dashboard ideas*/
+
+.placeholders {
+  margin-top:2em;
+  margin-bottom: 2em;
+  text-align: center;
+}
+.placeholders h4 {
+  margin-bottom: 0;
+}
+.placeholder {
+  margin-bottom: 2em;
+  margin-top: 2em;
+} 
+.placeholder img {
+  display: inline-block;
+  max-width: 100%;
+  max-height: 100%;
+}
+/*-- footer --*/
+footer {
+    background: #0f1215;
+    padding: 1em 0;
+}
+.copyright p {
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0;
+    font-size: .9em;
+}
+.copyright p a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.copyright p a:hover {
+    color: #03A9F4;
+}
+/*-- footer --*/
+
