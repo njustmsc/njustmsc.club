@@ -9,7 +9,7 @@ body a{
   -ms-transition: 0.5s all;
 }
 html, body{
-    font-size: 100%;
+  font-size: 100%;
 	font-family: 'Roboto', sans-serif;
 }
 body{
@@ -33,64 +33,32 @@ body{
   list-style: none;
   overflow: hidden;
   width: 100%;
-  padding: 0;
-  margin: 0;
-}
-.callbacks img {
-  position: relative;
-  z-index: 1;
-  height: auto;
-  border: 0;
-}
-.callbacks{
-	display: block;
-	position: absolute;
-	z-index: 2;
-	font-size: 20px;
-	text-shadow: none;
-	color: #fff;
-	left: 0;
-	right: 0;
-	padding: 10px 20px;
-	margin: 0;
-	max-width: none;
-	top: 10%;
-	text-align: center;
 }
 .rslides {
   position: relative;
   overflow: hidden;
   padding: 0;
 }
-.rslides img {
-  height: auto;
-  border: 0;
-  max-width: 100%;
-  max-height: 100%;
-  }
 /*-- //slider --*/
 /*-- banner-main --*/
 .banner-main {
-  padding: 4em 0 4em 0;
+  padding: 4em 0;
 }
 /*-- //banner-main --*/
 /*-- new_container --*/
 .new_container {
-  padding-right: 1em;
-  padding-left: 1em;
-  margin-right: auto;
-  margin-left: auto;
+  margin:0 auto;
+  position: relative;
+  max-width: 640px;
 }
-@media (min-width: 768px) {
-  .new_container {
-    width: 750px;
+.new_container img {
+  z-index: 1;
+  border: 0;
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
   }
-}
-@media (min-width: 992px) {
-  .new_container {
-    width: 860px;
-  }
-}
+
 /*-- //new_container --*/
 /*  */
 .view img {
@@ -121,7 +89,7 @@ body{
   text-align: center;
   margin-bottom: 4em;
 }
-.marketing h2,h3,h5 {
+.marketing h1,h2,h3,h4,h5 {
   font-weight: normal;
   color:#D8D8D8;
 }
@@ -130,8 +98,10 @@ body{
   margin-right: 10px;
   margin-left: 10px;
   color:#D8D8D8;
-  font-weight: lighter;
+  font-size:large;
+  font-weight: normal;
 }
+
 /* //marketing */
 
 /*-- team --*/
@@ -163,7 +133,7 @@ body{
   position: absolute;
   right: 0;
   top: 0;
-  z-index: -1;
+  z-index:-1;
 }
 /*  */
 
@@ -206,3 +176,28 @@ footer {
 }
 /*-- footer --*/
 
+/* --enroll-- */
+.form-enroll {
+  max-width: 45em;
+  padding: 1em;
+  margin: 0 auto;
+}
+.form-enroll .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 1em;
+}
+.form-enroll .form-control:focus {
+  z-index: 2;
+}
+.checkbox {
+  max-width: 45em;
+  padding: 1.5em;
+  margin: 0 auto;
+}
+/* --//enroll-- */

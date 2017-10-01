@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="css/ie10-viewport-bug-workaround.css">
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
     <link rel="stylesheet" href="css/animate.css">
-    
-    
+
+
     <!-- <link rel="stylesheet" href="css/style_0.css" type="text/css" media="all" /> -->
 
     <script src="js/ie-emulation-modes-warning.js"></script>
@@ -45,135 +45,73 @@
 </head>
 
 <body>
-        <div class="container-fluid marketing placeholders">
-                <div class="row">
-                    <div class="col-md-12">
-                        <form autocomplete="off" action="/enroll1"
-                              th:object="${answer1}" method="post" class="form-horizontal"
-                              role="form">
-                            <h2>新生报名</h2>
-                            <h3>1 * 基本问题</h3>
-                            <div class="form-group">
-                                <div class="col-sm-6 col-sm-offset-3">
-
-                                    <input type="text" th:field="*{name}" placeholder="姓名"
-                                           class="form-control" />
-                                </div>
-                            </div>
-            
-                            <div class="form-group">
-                                <div class="col-sm-6 col-sm-offset-3">
-                                    
-                                    <input type="text" th:field="*{sex}"
-                                           placeholder="性别" class="form-control" />
-                                </div>
-                            </div>
-            
-                            <div class="form-group">
-                                <div class="col-sm-6 col-sm-offset-3">
-                    
-                                    <input type="text" th:field="*{birthday}"
-                                           placeholder="生日" class="form-control" />
-                                </div>
-                            </div>
-            
-                            <div class="form-group">
-                                <div class="col-sm-6 col-sm-offset-3">
-                                    
-                                    <input type="text" th:field="*{mail}" placeholder="邮箱"
-                                           class="form-control" />
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-sm-6 col-sm-offset-3">
-                                    <input type="text" th:field="*{grade}" placeholder="学院+年级"
-                                           class="form-control" />
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-sm-6 col-sm-offset-3">
-                                    <input type="text" th:field="*{phone}" placeholder="手机号"
-                                           class="form-control" />
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-sm-6 col-sm-offset-3">
-                                    <input type="text" th:field="*{QQ}" placeholder="QQ号"
-                                           class="form-control" />
-                                </div>
-                            </div>
-
-                            <h3>2 * 个性化问题</h3>
-
-                            <div class="form-group">
-                                <div class="col-sm-6 col-sm-offset-3">
-                                    <!-- <input type="textarea" rows="10" th:field="*{phone}" placeholder="你对微软有什么了解呢~" -->
-                                           <!-- class="form-control" /> -->
-                                           <textarea th:field="*{a21}" class="form-control" rows="3" placeholder="你对微软有什么了解呢~"></textarea>
-                                </div>
-                                <div class="col-sm-6 col-sm-offset-3">
-                                    <!-- <input type="textarea" rows="10" th:field="*{phone}" placeholder="你对微软有什么了解呢~" -->
-                                        <!-- class="form-control" /> -->
-                                        <textarea th:field="*{a22}" class="form-control" rows="3" placeholder="对聊天机器人，如小冰，有什么看法"></textarea>
-                                </div>
-                                <div class="col-sm-6 col-sm-offset-3">
-                                    <!-- <input type="textarea" rows="10" th:field="*{phone}" placeholder="你对微软有什么了解呢~" -->
-                                        <!-- class="form-control" /> -->
-                                       <textarea th:field="*{a23}" class="form-control" rows="3" placeholder="对俱乐部活动有什么期待~"></textarea>
-                                </div>
-                            </div>
-
-                            <h3>3 * 意向部门</h3>
-                            <h5>最想加入的部门</h5>
-                            <div class="col-sm-6 col-sm-offset-3">
-                                <select class="form-control" th:field="*{a31}">
-                                    <option value="美工部">美工部</option>
-                                    <option value="技术部">技术部</option>
-                                    <option value="活动部">活动部</option>
-                                    <option value="新媒体策划部">新媒体策划部</option>
-                                </select>  
-                            </div>
-                            <div class="col-sm-6 col-sm-offset-3">
-                                    <!-- <input type="textarea" rows="10" th:field="*{phone}" placeholder="你对微软有什么了解呢~" -->
-                                        <!-- class="form-control" /> -->
-                                       <textarea th:field="*{a32}" class="form-control" rows="3" placeholder="描述相关经历"></textarea>
-                             </div>
-
-
-
-            
-                            
-                            <div class="form-group">
-                                <div class="col-sm-6 col-sm-offset-3">
-                                    <button type="submit" class="btn btn-primary btn-block">confirm message</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+    <div class="container marketing placeholders">
+        <form autocomplete="off" action="/enroll1" th:object="${answer1}" method="post" class="form-enroll" role="form">
+            <div class="form-group row">
+                <h1>新生报名</h1>
+                <h3>1 * 基本问题</h3>
+                <div class="col-sm-4">
+                    <input type="text" th:field="*{name}" placeholder="姓名" class="form-control" required autofocus>
                 </div>
+                <div class="col-sm-4">
+                    <input type="text" th:field="*{sex}" placeholder="性别" class="form-control" required>
+                </div>
+                <div class="col-sm-4">
+                    <input type="text" th:field="*{birthday}" placeholder="生日" class="form-control" required>
+                </div>
+                <div class="col-sm-6">
+                    <input type="text" th:field="*{mail}" placeholder="邮箱" class="form-control" required>
+                </div>
+                <div class="col-sm-6">
+                    <input type="text" th:field="*{grade}" placeholder="学院+年级" class="form-control" required>
+                </div>
+                <div class="col-sm-6">
+                    <input type="text" th:field="*{phone}" placeholder="手机号" class="form-control" required>
+                </div>
+                <div class="col-sm-6">
+                    <input type="text" th:field="*{QQ}" placeholder="QQ号" class="form-control" required>
+                </div>
+                <div class="clearfix"></div>
             </div>
-            <script type="text/javascript" src="/js/jquery-3.2.1.min.js" charset="UTF-8"></script>
-            <script type="text/javascript" src="/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
-            <script type="text/javascript" src="/js/bootstrap-datetimepicker.trans.js" charset="UTF-8"></script>
-            <script type="text/javascript">
-                $('.form_date').datetimepicker({
-                    language:  'zh-CN',
-                    weekStart: 1,
-                    todayBtn:  1,
-                    autoclose: 1,
-                    todayHighlight: 1,
-                    startView: 2,
-                    minView: 2,
-                    forceParse: 0
-                });
-            </script>
-            </body>
-            </html>
-
-
-
-
-
+            <div class="form-group">
+                <h3>2 * 个性化问题</h3>
+                <h5>你对微软有什么了解呢~</h5>
+                <textarea th:field="*{a21}" class="form-control" rows="3" placeholder="你对微软有什么了解呢~" required></textarea>
+                <h5>对聊天机器人，如小冰，有什么看法</h5>
+                <textarea th:field="*{a22}" class="form-control" rows="3" placeholder="对聊天机器人，如小冰，有什么看法" required></textarea>
+                <h5>对俱乐部活动有什么期待~</h5>
+                <textarea th:field="*{a23}" class="form-control" rows="3" placeholder="对俱乐部活动有什么期待~" required></textarea>
+            </div>
+            <div class="form-group">
+                <h3>3 * 意向部门</h3>
+                <h5>最想加入的部门</h5>
+                <select th:field="*{a32}" class="form-control" required>
+                    <option value="美工部">美工部</option>
+                    <option value="技术部">技术部</option>
+                    <option value="活动部">活动部</option>
+                    <option value="新媒体策划部">新媒体策划部</option>
+                </select>
+                <h5>描述相关经历</h5>
+                <textarea class="form-control" rows="3" placeholder="描述相关经历" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" style="max-width:20em;margin:0 auto;">提交</button>
+        </form>
+    </div>
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="/js/bootstrap-datetimepicker.trans.js" charset="UTF-8"></script>
+    <script type="text/javascript">
+        $('.form_date').datetimepicker({
+            language: 'zh-CN',
+            weekStart: 1,
+            todayBtn: 1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            minView: 2,
+            forceParse: 0
+        });
+    </script>
     <footer>
         <div class="container">
             <div class="copyright">
@@ -185,12 +123,13 @@
     <script src="js/jarallax.js"></script>
     <script src="js/SmoothScroll.min.js"></script>
     <script type="text/javascript">
-                    /* init Jarallax */
-                    $('.jarallax').jarallax({
-                        speed: 0.5,
-                        imgWidth: 1366,
-                        imgHeight: 768
-                    })
+        /* init Jarallax */
+        $('.jarallax').jarallax({
+            speed: 0.5,
+            imgWidth: 1366,
+            imgHeight: 768
+        })
+
     </script>
     <script src="js/responsiveslides.min.js"></script>
     <script type="text/javascript" src="js/move-top.js"></script>
@@ -199,9 +138,10 @@
     <script src="js/jquery.filterizr.js"></script>
     <script src="js/controls.js"></script>
     <script type="text/javascript">
-                    $(function () {
-                        $('.filtr-container').filterizr();
-                    });
+        $(function () {
+            $('.filtr-container').filterizr();
+        });
+
     </script>
     <!-- //Tabs-JavaScript -->
     <!-- PopUp-Box-JavaScript -->
@@ -210,6 +150,7 @@
         $(function () {
             $('.filtr-item a').Chocolat();
         });
+
     </script>
     <!-- //PopUp-Box-JavaScript -->
 </body>

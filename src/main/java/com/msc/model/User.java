@@ -1,10 +1,12 @@
 package com.msc.model;
 
+import com.sun.corba.se.spi.servicecontext.UEInfoServiceContext;
+
 public class User {
     private Integer id;
     private String username;
     private String password;
-
+    public User(){}
     public Integer getId() {
         return id;
     }

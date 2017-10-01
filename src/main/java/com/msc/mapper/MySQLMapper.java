@@ -23,7 +23,6 @@ public interface MySQLMapper {
     @Insert("insert into answer1(basicinfoid,a21,a22,a23,a31,a32)" +
             "values(#{id},#{a21},#{a22},#{a23},#{a31},#{a32})")
     void addAnswer1(@Param("id")Integer basicinfoId,@Param("a21")String a21,@Param("a22")String a22,@Param("a23")String a23,@Param("a31")String a31,@Param("a32")String a32);
-    @Select("SELECT auto_increment FROM information_schema.`TABLES` WHERE  TABLE_NAME='basicinfo'")
 
     @Insert("insert into answer2(basicinfoid,a21,a22,a31,a32,a33)" +
             "values(#{id},#{a21},#{a22},#{a31},#{a32},#{a33})")
