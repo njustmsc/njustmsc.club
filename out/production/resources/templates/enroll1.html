@@ -18,7 +18,6 @@
 
     <!-- <link rel="stylesheet" href="css/style_0.css" type="text/css" media="all" /> -->
 
-    <script src="js/ie-emulation-modes-warning.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/wow.min.js"></script>
@@ -29,7 +28,6 @@
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
-
 
     <script type="application/x-javascript">
         addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
@@ -46,7 +44,7 @@
 
 <body>
     <div class="container marketing placeholders">
-        <form autocomplete="off" action="/enroll1" th:object="${answer1}" method="post" class="form-enroll" role="form">
+        <form id="form" autocomplete="off" action="/enroll1" th:object="${answer1}" method="post" class="form-enroll" role="form">
             <div class="form-group row">
                 <h1>新生报名</h1>
                 <h3>1 * 基本问题</h3>
@@ -54,10 +52,15 @@
                     <input type="text" th:field="*{name}" placeholder="姓名" class="form-control" required autofocus>
                 </div>
                 <div class="col-sm-4">
-                    <input type="text" th:field="*{sex}" placeholder="性别" class="form-control" required>
+                    <input type="text" th:field="*{birthday}" placeholder="生日" class="form-control" required>
                 </div>
                 <div class="col-sm-4">
-                    <input type="text" th:field="*{birthday}" placeholder="生日" class="form-control" required>
+                    <!--<input type="text" th:field="*{sex}" placeholder="性别" class="form-control" required>-->
+                    <select th:field="*{sex}" class="form-control">
+                        <option value="男性">男性</option>
+                        <option value="女性">女性</option>
+                        <option value="其它">其它</option>
+                    </select>
                 </div>
                 <div class="col-sm-6">
                     <input type="text" th:field="*{mail}" placeholder="邮箱" class="form-control" required>
@@ -81,37 +84,25 @@
                 <textarea th:field="*{a22}" class="form-control" rows="3" placeholder="对聊天机器人，如小冰，有什么看法" required></textarea>
                 <h5>对俱乐部活动有什么期待~</h5>
                 <textarea th:field="*{a23}" class="form-control" rows="3" placeholder="对俱乐部活动有什么期待~" required></textarea>
+                <h5>你有哪些特长~</h5>
+                <textarea th:field="*{a24}" class="form-control" rows="3" placeholder="C++，Java，PHP，吐槽特犀利，画画特好看，长得特漂亮，等~" required></textarea>
             </div>
             <div class="form-group">
                 <h3>3 * 意向部门</h3>
                 <h5>最想加入的部门</h5>
-                <select th:field="*{a32}" class="form-control" required>
+                <select th:field="*{a31}" class="form-control" required>
                     <option value="美工部">美工部</option>
                     <option value="技术部">技术部</option>
                     <option value="活动部">活动部</option>
                     <option value="新媒体策划部">新媒体策划部</option>
                 </select>
                 <h5>描述相关经历</h5>
-                <textarea class="form-control" rows="3" placeholder="描述相关经历" required></textarea>
+                <textarea th:field="*{a32}" class="form-control" rows="3" placeholder="描述相关经历" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary btn-block" style="max-width:20em;margin:0 auto;">提交</button>
+            <button type="submit" id="submit" class="btn btn-primary btn-block" style="max-width:20em;margin:0 auto;">提交</button>
         </form>
     </div>
-    <script type="text/javascript" src="/js/jquery-3.2.1.min.js" charset="UTF-8"></script>
-    <script type="text/javascript" src="/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
-    <script type="text/javascript" src="/js/bootstrap-datetimepicker.trans.js" charset="UTF-8"></script>
-    <script type="text/javascript">
-        $('.form_date').datetimepicker({
-            language: 'zh-CN',
-            weekStart: 1,
-            todayBtn: 1,
-            autoclose: 1,
-            todayHighlight: 1,
-            startView: 2,
-            minView: 2,
-            forceParse: 0
-        });
-    </script>
+
     <footer>
         <div class="container">
             <div class="copyright">

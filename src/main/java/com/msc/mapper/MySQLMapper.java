@@ -20,13 +20,13 @@ public interface MySQLMapper {
             "values(#{id},#{name},#{sex},#{birthday},#{mail},#{grade},#{phone},#{QQ})")
     void addBasicInfo(@Param("id")Integer id,@Param("name")String name,@Param("sex")String sex,@Param("birthday")String birthday,
                       @Param("mail")String mail,@Param("grade")String grade,@Param("phone")String phone,@Param("QQ")String QQ);
-    @Insert("insert into answer1(basicinfoid,a21,a22,a23,a31,a32)" +
-            "values(#{id},#{a21},#{a22},#{a23},#{a31},#{a32})")
-    void addAnswer1(@Param("id")Integer basicinfoId,@Param("a21")String a21,@Param("a22")String a22,@Param("a23")String a23,@Param("a31")String a31,@Param("a32")String a32);
+    @Insert("insert into answer1(basicinfoid,a21,a22,a23,a24,a31,a32)" +
+            "values(#{id},#{a21},#{a22},#{a23},#{a24},#{a31},#{a32})")
+    void addAnswer1(@Param("id")Integer basicinfoId,@Param("a21")String a21,@Param("a22")String a22,@Param("a23")String a23,@Param("a24")String a24,@Param("a31")String a31,@Param("a32")String a32);
 
-    @Insert("insert into answer2(basicinfoid,a21,a22,a31,a32,a33)" +
-            "values(#{id},#{a21},#{a22},#{a31},#{a32},#{a33})")
-    void addAnswer2(@Param("id")Integer basicinfoId,@Param("a21")String a21,@Param("a22")String a22,@Param("a31")String a31,@Param("a32")String a32,@Param("a33")String a33);
+    @Insert("insert into answer2(basicinfoid,a21,a22,a31,a32,a33,a34)" +
+            "values(#{id},#{a21},#{a22},#{a31},#{a32},#{a33},#{a34})")
+    void addAnswer2(@Param("id")Integer basicinfoId,@Param("a21")String a21,@Param("a22")String a22,@Param("a31")String a31,@Param("a32")String a32,@Param("a33")String a33,@Param("a34")String a34);
 
 
     @Select("SELECT auto_increment FROM information_schema.`TABLES` WHERE  TABLE_NAME='basicinfo'")
@@ -50,6 +50,9 @@ public interface MySQLMapper {
             @Result(id=true,column = "a23",property = "a23"),
             @Result(id=true,column = "a31",property = "a31"),
             @Result(id=true,column = "a32",property = "a32"),
+            @Result(id=true,column = "a33",property = "a33"),
+            @Result(id=true,column = "a34",property = "a34"),
+
     })
     List<Answer2> queryAllEnroll2();
 
@@ -65,9 +68,13 @@ public interface MySQLMapper {
             @Result(id=true,column = "QQ",property = "QQ"),
             @Result(id=true,column = "a21",property = "a21"),
             @Result(id=true,column = "a22",property = "a22"),
+            @Result(id=true,column = "a23",property = "a23"),
+            @Result(id=true,column = "a24",property = "a24"),
             @Result(id=true,column = "a31",property = "a31"),
             @Result(id=true,column = "a32",property = "a32"),
-            @Result(id=true,column = "a33",property = "a33"),
     })
     List<Answer1> queryAllEnroll1();
+
+    @Delete("delete from basicinfo where id = #{id}")
+    void del(@Param("id")Integer id);
 }

@@ -6,7 +6,7 @@ public class Answer2 extends BasicInfo {
     private String a31;
     private String a32;
     private String a33;
-
+    private String a34;
 
     public String getA21() {
         return a21;
@@ -46,5 +46,13 @@ public class Answer2 extends BasicInfo {
 
     public void setA33(String a33) {
         this.a33 = a33;
+    }
+
+    public String getA34() {
+        return a34;
+    }
+
+    public void setA34(String a34) {
+        this.a34 = a34;
     }
 }

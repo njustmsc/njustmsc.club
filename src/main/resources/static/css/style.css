@@ -129,11 +129,13 @@ body{
   content: '';
   width: 100%;
   height: 100%;
-  background: rgba(3, 169, 244, 0.76);
+  background: #03A9F4;
+  opacity:0.60; 
   position: absolute;
   right: 0;
   top: 0;
   z-index:-1;
+  transform: translateZ(100px);
 }
 /*  */
 
@@ -150,6 +152,7 @@ body{
 .placeholder {
   margin-bottom: 2em;
   margin-top: 2em;
+    transform: translateZ(200px);
 } 
 .placeholder img {
   display: inline-block;

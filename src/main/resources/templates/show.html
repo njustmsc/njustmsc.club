@@ -20,9 +20,10 @@
         <td>a21</td>
         <td>a22</td>
         <td>a23</td>
+        <td>a24</td>
         <td>a31</td>
         <td>a32</td>
-
+        <td></td>
     </tr>
     <tr th:each="answer1:${answer1s}">
         <td><span th:text="${answer1.name}"></span></td>
@@ -35,8 +36,11 @@
         <td><span th:text="${answer1.a21}"></span></td>
         <td><span th:text="${answer1.a22}"></span></td>
         <td><span th:text="${answer1.a23}"></span></td>
+        <td><span th:text="${answer1.a24}"></span></td>
         <td><span th:text="${answer1.a31}"></span></td>
         <td><span th:text="${answer1.a32}"></span></td>
+        <td><span><a th:href="@{/del(id=${answer1.id})}">删除</a></span> </td>
+
     </tr>
 </table>
 <p>非新生</p>
@@ -54,6 +58,8 @@
         <td>a23</td>
         <td>a31</td>
         <td>a32</td>
+        <td>a33</td>
+        <td>a34</td>
 
     </tr>
     <tr th:each="answer2:${answer2s}">
@@ -69,6 +75,9 @@
         <td><span th:text="${answer2.a31}"></span></td>
         <td><span th:text="${answer2.a32}"></span></td>
         <td><span th:text="${answer2.a33}"></span></td>
+        <td><span th:text="${answer2.a34}"></span></td>
+        <td><span><a th:href="@{/del(id=${answer2.id})}">删除</a></span> </td>
+
     </tr>
 </table>
 </body>
