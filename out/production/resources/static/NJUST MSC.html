@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://njust-msc.club/enroll1.html -->
+<html lang="zh" style="" class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms no-csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <meta name="keywords" content="MSC, 南理工, 南理MSC, njust MSC, 微软学生俱乐部, 南理微软学生俱乐部, NJUST MSC, NJUST">
+    <title>NJUST MSC</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="./NJUST MSC_files/bootstrap.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./NJUST MSC_files/chocolat.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./NJUST MSC_files/font-awesome.css">
+    <link rel="stylesheet" href="./NJUST MSC_files/ie10-viewport-bug-workaround.css">
+    <link rel="stylesheet" href="./NJUST MSC_files/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./NJUST MSC_files/animate.css">
+
+
+    <!-- <link rel="stylesheet" href="css/style_0.css" type="text/css" media="all" /> -->
+
+    <script src="./NJUST MSC_files/jquery.min.js.下载"></script><style type="text/css" abt="234"></style>
+    <script src="./NJUST MSC_files/bootstrap.js.下载"></script>
+    <script src="./NJUST MSC_files/wow.min.js.下载"></script>
+    <script src="./NJUST MSC_files/slider.js.下载"></script>
+    <script src="./NJUST MSC_files/jquery.fancybox.js.下载"></script>
+    <script src="./NJUST MSC_files/main.js.下载"></script>
+    <script src="./NJUST MSC_files/owl.carousel.min.js.下载"></script>
+    <script src="./NJUST MSC_files/modernizr-2.6.2.min.js.下载"></script>
+
+    <link rel="stylesheet" href="./NJUST MSC_files/font-awesome(1).css">
+
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+    </script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+    </script>
+<style type="text/css">.fancybox-margin{margin-right:0px;}</style><script>//console.log('a')
+</script><script>doAdblock();
+function doAdblock(){
+    (function() {
+        function A() {}
+        A.prototype = {
+            rules: {
+                'pps_pps': {
+                    'find': /^http:\/\/www\.iqiyi\.com\/player\/cupid\/common\/pps_flvplay_s\.swf/,
+                    'replace': 'http://swf.adtchrome.com/pps_20140420.swf'
+                },
+                '17173_in':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFile(Customer)?\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_in_20150522.swf"
+                },
+                '17173_out':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFileFirstpage\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_out_20150522.swf"
+                },
+                '17173_live':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream(_firstpage)?\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_stream_20150522.swf"
+                },
+                '17173_live_out':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream_(custom)?Out\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173.out.Live.swf"
+                }
+            },
+            _done: null,
+            get done() {
+                if(!this._done) {
+                    this._done = new Array();
+                }
+                return this._done;
+            },
+            addAnimations: function() {
+                var style = document.createElement('style');
+                style.type = 'text/css';
+                style.innerHTML = 'object,embed{\
+                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;\
+                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;\
+                -o-animation-duration:.001s;-o-animation-name:playerInserted;\
+                animation-duration:.001s;animation-name:playerInserted;}\
+                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}';
+                document.getElementsByTagName('head')[0].appendChild(style);
+            },
+            animationsHandler: function(e) {
+                if(e.animationName === 'playerInserted') {
+                    this.replace(e.target);
+                }
+            },
+            replace: function(elem) {
+                if (/http:\/\/v.youku.com\/v_show\/.*/.test(window.location.href)){
+                    var tag = document.getElementById("playerBox").getAttribute("player")
+                    if (tag == "adt"){
+                        console.log("adt adv")
+                        return;
+                    }
+                }
+                if(this.done.indexOf(elem) != -1) return;
+                this.done.push(elem);
+                var player = elem.data || elem.src;
+                if(!player) return;
+                var i, find, replace = false;
+                for(i in this.rules) {
+                    find = this.rules[i]['find'];
+                    if(find.test(player)) {
+                        replace = this.rules[i]['replace'];
+                        if('function' === typeof this.rules[i]['preHandle']) {
+                            this.rules[i]['preHandle'].bind(this, elem, find, replace, player)();
+                        }else{
+                            this.reallyReplace.bind(this, elem, find, replace)();
+                        }
+                        break;
+                    }
+                }
+            },
+            reallyReplace: function(elem, find, replace) {
+                elem.data && (elem.data = elem.data.replace(find, replace)) || elem.src && ((elem.src = elem.src.replace(find, replace)) && (elem.style.display = 'block'));
+                var b = elem.querySelector("param[name='movie']");
+                this.reloadPlugin(elem);
+            },
+            reloadPlugin: function(elem) {
+                var nextSibling = elem.nextSibling;
+                var parentNode = elem.parentNode;
+                parentNode.removeChild(elem);
+                var newElem = elem.cloneNode(true);
+                this.done.push(newElem);
+                if(nextSibling) {
+                    parentNode.insertBefore(newElem, nextSibling);
+                } else {
+                    parentNode.appendChild(newElem);
+                }
+            },
+            init: function() {
+                var handler = this.animationsHandler.bind(this);
+                document.body.addEventListener('webkitAnimationStart', handler, false);
+                document.body.addEventListener('msAnimationStart', handler, false);
+                document.body.addEventListener('oAnimationStart', handler, false);
+                document.body.addEventListener('animationstart', handler, false);
+                this.addAnimations();
+            }
+        };
+        new A().init();
+    })();
+}
+// 20140730
+(function cnbeta() {
+    if (document.URL.indexOf('cnbeta.com') >= 0) {
+        var elms = document.body.querySelectorAll("p>embed");
+        Array.prototype.forEach.call(elms, function(elm) {
+            elm.style.marginLeft = "0px";
+        });
+    }
+})();
+//baidu
+if(document.URL.indexOf('www.baidu.com') >= 0){
+    if(document && document.getElementsByTagName && document.getElementById && document.body){
+        var aa = function(){
+            var all = document.body.querySelectorAll("#content_left div,#content_left table");
+            for(var i = 0; i < all.length; i++){
+                if(/display:\s?(table|block)\s!important/.test(all[i].getAttribute("style"))){all[i].style.display= "none";all[i].style.visibility='hidden';}
+            }
+            all = document.body.querySelectorAll('.result.c-container[id="1"]');
+            if(all.length == 1) return;
+            for(var i = 0; i < all.length; i++){
+                var dataClick = all[i].getAttribute('data-click');
+                if(dataClick.indexOf('rsv_cd')>-1) continue;
+                all[i].style.display= "none";all[i].style.visibility='hidden';
+            }
+        }
+        aa();
+        document.getElementById('wrapper_wrapper').addEventListener('DOMSubtreeModified',aa)
+    };
+}
+// 20140922
+(function kill_360() {
+    if (document.URL.indexOf('so.com') >= 0) {
+        document.getElementById("e_idea_pp").style.display = none;
+    }
+})();
+if (document.URL.indexOf("tv.sohu.com") >= 0){
+    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+}
+if (document.URL.indexOf("56.com") >= 0){
+    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+}
+if (document.URL.indexOf("iqiyi.com") >= 0){
+    if (document.cookie.indexOf("player_forcedType=h5_VOD")==-1){
+        document.cookie='player_forcedType=h5_VOD'
+        if(localStorage.reloadTime && Date.now() - parseInt(localStorage.reloadTime)<60000){
+            console.log('no reload')
+        }else{
+            location.reload()
+            localStorage.reloadTime = Date.now();
+        }
+    }
+}
+</script><style type="text/css">object,embed{                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;                -o-animation-duration:.001s;-o-animation-name:playerInserted;                animation-duration:.001s;animation-name:playerInserted;}                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}</style></head>
+
+<body>
+<div class="container marketing placeholders">
+    <form id="form" autocomplete="off" action="https://njust-msc.club/enroll1" method="post" class="form-enroll" role="form">
+        <div class="form-group row">
+            <h1>新生报名</h1>
+            <h3>1 * 基本问题</h3>
+            <div class="col-sm-4">
+                <input type="text" placeholder="姓名" class="form-control" required="" autofocus="" id="name" name="name" value="">
+            </div>
+            <div class="col-sm-4">
+                <!--<input type="text" th:field="*{school}" placeholder="生日" class="form-control" required>-->
+                <select class="form-control" id="grade" name="grade">
+                    <option value="大一刚入门">大一刚入门</option>
+                    <option value="大二老油条">大二老油条</option>
+                    <option value="大三老腊肉">大三老腊肉</option>
+                    <option value='' disabled selected style='display:none;'>年级</option>  
+                    
+                    <option value="大四将下架">大四将下架</option>
+                    <option value="烟酒生">烟酒生</option>
+                </select>
+            </div>
+            <div class="col-sm-4">
+                <select class="form-control" id="sex" name="sex">
+                    <option value="男性">男性</option>
+                    <option value="女性">女性</option>
+                    <option value="其它">其它</option>
+                </select>
+            </div>
+            <div class="col-sm-6">
+                <input type="text" placeholder="邮箱" class="form-control" required="" id="mail" name="mail" value="">
+            </div>
+            <div class="col-sm-6">
+                <input type="text" placeholder="学院" class="form-control" required="" id="school" name="school" value="">
+            </div>
+            <div class="col-sm-6">
+                <input type="text" placeholder="手机号" class="form-control" required="" id="phone" name="phone" value="">
+            </div>
+            <div class="col-sm-6">
+                <input type="text" placeholder="QQ号" class="form-control" required="" id="QQ" name="QQ" value="">
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="form-group">
+            <h3>2 * 个性化问题</h3>
+            <h5>你对微软有什么了解呢~</h5>
+            <textarea class="form-control" rows="3" placeholder="你对微软有什么了解呢~" required="" id="a21" name="a21"></textarea>
+            <h5>对聊天机器人，如小冰，有什么看法</h5>
+            <textarea class="form-control" rows="3" placeholder="对聊天机器人，如小冰，有什么看法" required="" id="a22" name="a22"></textarea>
+            <h5>对俱乐部活动有什么期待~</h5>
+            <textarea class="form-control" rows="3" placeholder="对俱乐部活动有什么期待~" required="" id="a23" name="a23"></textarea>
+            <!--<h5>你有哪些特长~</h5>-->
+            <!--<textarea th:field="*{a24}" class="form-control" rows="3" placeholder="C++，Java，PHP，吐槽特犀利，画画特好看，长得特漂亮，等~" required></textarea>-->
+            <h5>擅长领域</h5>
+            <div class="checkbox"><label><input type="checkbox" value="活动策划" id="a241" name="a24"><input type="hidden" name="_a24" value="on">活动策划</label></div>
+
+            <div class="checkbox"><label><input type="checkbox" value="美工设计" id="a242" name="a24"><input type="hidden" name="_a24" value="on">美工设计</label></div>
+            <div class="checkbox"><label><input type="checkbox" value="编程开发" id="a243" name="a24"><input type="hidden" name="_a24" value="on">编程开发</label></div>
+            <div class="checkbox"><label><input type="checkbox" value="渗透测试" id="a244" name="a24"><input type="hidden" name="_a24" value="on">渗透测试</label></div>
+            <div class="checkbox"><label><input type="checkbox" value="硬核向玩家" id="a245" name="a24"><input type="hidden" name="_a24" value="on">硬核向玩家</label></div>
+            <div class="checkbox"><label><input type="checkbox" value="吐槽役担当" id="a246" name="a24"><input type="hidden" name="_a24" value="on">吐槽役担当</label></div>
+            <div class="checkbox"><label><input type="checkbox" value="水" id="a247" name="a24"><input type="hidden" name="_a24" value="on">大自然的搬运工(水)</label></div>
+
+        </div>
+        <div class="form-group">
+            <h3>3 * 意向部门</h3>
+            <h5>最想加入的部门</h5>
+            <!--<select th:field="*{a31}" class="form-control" required>-->
+            <!--<option value="美工部">美工部</option>-->
+            <!--<option value="技术部">技术部</option>-->
+            <!--<option value="活动部">活动部</option>-->
+            <!--<option value="新媒体策划部">新媒体策划部</option>-->
+            <!--</select>-->
+            <div class="checkbox"><label><input type="checkbox" value="活动策划部" id="a311" name="a31"><input type="hidden" name="_a31" value="on">活动策划部</label></div>
+
+            <div class="checkbox"><label><input type="checkbox" value="技术支持部" id="a312" name="a31"><input type="hidden" name="_a31" value="on">技术支持部(ACM、信息安全、工程、修电脑等)</label></div>
+            <div class="checkbox"><label><input type="checkbox" value="美工设计部" id="a313" name="a31"><input type="hidden" name="_a31" value="on">美工设计部</label></div>
+            <div class="checkbox"><label><input type="checkbox" value="新媒体策划部" id="a314" name="a31"><input type="hidden" name="_a31" value="on">新媒体策划</label></div>
+            <div class="checkbox"><label><input type="checkbox" value="老干部活动中心" id="a315" name="a31"><input type="hidden" name="_a31" value="on">老干部活动中心(仅仅是列出来说明有,别选)</label></div>
+            <h5>描述相关经历</h5>
+            <textarea class="form-control" rows="3" placeholder="描述相关经历" required="" id="a32" name="a32"></textarea>
+        </div>
+        <button type="submit" id="submit" class="btn btn-primary btn-block" style="max-width:20em;margin:0 auto;">提交</button>
+    </form>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="copyright">
+            <p>© 2017 NJUST MSC. All rights reserved | Design by <a href="https://njust-msc.club/enroll1.html#">NJUST MSC</a></p>
+        </div>
+    </div>
+</footer>
+<!-- //footer -->
+<script src="./NJUST MSC_files/jarallax.js.下载"></script>
+<script src="./NJUST MSC_files/SmoothScroll.min.js.下载"></script>
+<script type="text/javascript">
+    /* init Jarallax */
+    $('.jarallax').jarallax({
+        speed: 0.5,
+        imgWidth: 1366,
+        imgHeight: 768
+    })
+
+</script>
+<script src="./NJUST MSC_files/responsiveslides.min.js.下载"></script>
+<script type="text/javascript" src="./NJUST MSC_files/move-top.js.下载"></script>
+<script type="text/javascript" src="./NJUST MSC_files/easing.js.下载"></script>
+<!-- Tabs-JavaScript -->
+<script src="./NJUST MSC_files/jquery.filterizr.js.下载"></script>
+<script src="./NJUST MSC_files/controls.js.下载"></script>
+<script type="text/javascript">
+    $(function () {
+        $('.filtr-container').filterizr();
+    });
+
+</script>
+<!-- //Tabs-JavaScript -->
+<!-- PopUp-Box-JavaScript -->
+<script src="./NJUST MSC_files/jquery.chocolat.js.下载"></script>
+<script type="text/javascript">
+    $(function () {
+        $('.filtr-item a').Chocolat();
+    });
+
+</script>
+<!-- //PopUp-Box-JavaScript -->
+
+
+</body></html>

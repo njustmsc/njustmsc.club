@@ -16,9 +16,9 @@ public interface MySQLMapper {
             @Result(column = "password",property = "password")
     })
     User queryUserByUsername(@Param("username")String username);
-    @Insert("insert into basicinfo(id,name,sex,birthday,mail,grade,phone,QQ) " +
-            "values(#{id},#{name},#{sex},#{birthday},#{mail},#{grade},#{phone},#{QQ})")
-    void addBasicInfo(@Param("id")Integer id,@Param("name")String name,@Param("sex")String sex,@Param("birthday")String birthday,
+    @Insert("insert into basicinfo(id,name,sex,school,mail,grade,phone,QQ) " +
+            "values(#{id},#{name},#{sex},#{school},#{mail},#{grade},#{phone},#{QQ})")
+    void addBasicInfo(@Param("id")Integer id,@Param("name")String name,@Param("sex")String sex,@Param("school")String school,
                       @Param("mail")String mail,@Param("grade")String grade,@Param("phone")String phone,@Param("QQ")String QQ);
     @Insert("insert into answer1(basicinfoid,a21,a22,a23,a24,a31,a32)" +
             "values(#{id},#{a21},#{a22},#{a23},#{a24},#{a31},#{a32})")
@@ -40,7 +40,7 @@ public interface MySQLMapper {
             @Result(id=true,column = "id",property = "id"),
             @Result(id=true,column = "name",property = "name"),
             @Result(id=true,column = "sex",property = "sex"),
-            @Result(id=true,column = "birthday",property = "birthday"),
+            @Result(id=true,column = "school",property = "school"),
             @Result(id=true,column = "mail",property = "mail"),
             @Result(id=true,column = "grade",property = "grade"),
             @Result(id=true,column = "phone",property = "phone"),
@@ -61,7 +61,7 @@ public interface MySQLMapper {
             @Result(id=true,column = "id",property = "id"),
             @Result(id=true,column = "name",property = "name"),
             @Result(id=true,column = "sex",property = "sex"),
-            @Result(id=true,column = "birthday",property = "birthday"),
+            @Result(id=true,column = "school",property = "school"),
             @Result(id=true,column = "mail",property = "mail"),
             @Result(id=true,column = "grade",property = "grade"),
             @Result(id=true,column = "phone",property = "phone"),

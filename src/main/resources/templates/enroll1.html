@@ -43,107 +43,144 @@
 </head>
 
 <body>
-    <div class="container marketing placeholders">
-        <form id="form" autocomplete="off" action="/enroll1" th:object="${answer1}" method="post" class="form-enroll" role="form">
-            <div class="form-group row">
-                <h1>新生报名</h1>
-                <h3>1 * 基本问题</h3>
-                <div class="col-sm-4">
-                    <input type="text" th:field="*{name}" placeholder="姓名" class="form-control" required autofocus>
-                </div>
-                <div class="col-sm-4">
-                    <input type="text" th:field="*{birthday}" placeholder="生日" class="form-control" required>
-                </div>
-                <div class="col-sm-4">
-                    <!--<input type="text" th:field="*{sex}" placeholder="性别" class="form-control" required>-->
-                    <select th:field="*{sex}" class="form-control">
-                        <option value="男性">男性</option>
-                        <option value="女性">女性</option>
-                        <option value="其它">其它</option>
-                    </select>
-                </div>
-                <div class="col-sm-6">
-                    <input type="text" th:field="*{mail}" placeholder="邮箱" class="form-control" required>
-                </div>
-                <div class="col-sm-6">
-                    <input type="text" th:field="*{grade}" placeholder="学院+年级" class="form-control" required>
-                </div>
-                <div class="col-sm-6">
-                    <input type="text" th:field="*{phone}" placeholder="手机号" class="form-control" required>
-                </div>
-                <div class="col-sm-6">
-                    <input type="text" th:field="*{QQ}" placeholder="QQ号" class="form-control" required>
-                </div>
-                <div class="clearfix"></div>
+<div class="container marketing placeholders">
+    <form id="form" autocomplete="off" action="/enroll1" th:object="${answer1}" method="post" class="form-enroll" role="form">
+        <div class="form-group row">
+            <h1>新生报名</h1>
+            <h3>1 * 基本问题</h3>
+            <div class="col-sm-4">
+                <input type="text" th:field="*{name}" placeholder="姓名" class="form-control" required autofocus>
             </div>
-            <div class="form-group">
-                <h3>2 * 个性化问题</h3>
-                <h5>你对微软有什么了解呢~</h5>
-                <textarea th:field="*{a21}" class="form-control" rows="3" placeholder="你对微软有什么了解呢~" required></textarea>
-                <h5>对聊天机器人，如小冰，有什么看法</h5>
-                <textarea th:field="*{a22}" class="form-control" rows="3" placeholder="对聊天机器人，如小冰，有什么看法" required></textarea>
-                <h5>对俱乐部活动有什么期待~</h5>
-                <textarea th:field="*{a23}" class="form-control" rows="3" placeholder="对俱乐部活动有什么期待~" required></textarea>
-                <h5>你有哪些特长~</h5>
-                <textarea th:field="*{a24}" class="form-control" rows="3" placeholder="C++，Java，PHP，吐槽特犀利，画画特好看，长得特漂亮，等~" required></textarea>
-            </div>
-            <div class="form-group">
-                <h3>3 * 意向部门</h3>
-                <h5>最想加入的部门</h5>
-                <select th:field="*{a31}" class="form-control" required>
-                    <option value="美工部">美工部</option>
-                    <option value="技术部">技术部</option>
-                    <option value="活动部">活动部</option>
-                    <option value="新媒体策划部">新媒体策划部</option>
+            <div class="col-sm-4">
+                <!--<input type="text" th:field="*{school}" placeholder="生日" class="form-control" required>-->
+                <select th:field="*{grade}" class="form-control">
+                    <option value="大一刚入门">大一刚入门</option>
+                    <option value="大二老油条">大二老油条</option>
+                    <option value="大三老腊肉">大三老腊肉</option>
+                    <option value="大四将下架">大四将下架</option>
+                    <option value="烟酒生">烟酒生</option>
                 </select>
-                <h5>描述相关经历</h5>
-                <textarea th:field="*{a32}" class="form-control" rows="3" placeholder="描述相关经历" required></textarea>
             </div>
-            <button type="submit" id="submit" class="btn btn-primary btn-block" style="max-width:20em;margin:0 auto;">提交</button>
-        </form>
-    </div>
+            <div class="col-sm-4">
+                <select th:field="*{sex}" class="form-control">
+                    <option value="男性">男性</option>
+                    <option value="女性">女性</option>
+                    <option value="其它">其它</option>
+                </select>
+            </div>
+            <div class="col-sm-6">
+                <input type="text" th:field="*{mail}" placeholder="邮箱" class="form-control" required>
+            </div>
+            <div class="col-sm-6">
+                <input type="text" th:field="*{school}" placeholder="学院" class="form-control" required>
+            </div>
+            <div class="col-sm-6">
+                <input type="text" th:field="*{phone}" placeholder="手机号" class="form-control" required>
+            </div>
+            <div class="col-sm-6">
+                <input type="text" th:field="*{QQ}" placeholder="QQ号" class="form-control" required>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="form-group">
+            <h3>2 * 个性化问题</h3>
+            <h5>你对微软有什么了解呢~</h5>
+            <textarea th:field="*{a21}" class="form-control" rows="3" placeholder="你对微软有什么了解呢~"></textarea>
+            <!-- <h5>对聊天机器人，如小冰，有什么看法</h5> -->
+            <!-- <textarea th:field="*{a22}" class="form-control" rows="3" placeholder="对聊天机器人，如小冰，有什么看法" required></textarea> -->
+            <h5>对俱乐部活动有什么期待~</h5>
+            <textarea th:field="*{a23}" class="form-control" rows="3" placeholder="对俱乐部活动有什么期待~"></textarea>
+            <!--<h5>你有哪些特长~</h5>-->
+            <!--<textarea th:field="*{a24}" class="form-control" rows="3" placeholder="C++，Java，PHP，吐槽特犀利，画画特好看，长得特漂亮，等~" required></textarea>-->
+            <h5>擅长领域</h5>
+            <!-- <div class="checkbox"><label><input type="checkbox" th:field="*{a24}" value="活动策划">活动策划</label></div>
 
-    <footer>
-        <div class="container">
-            <div class="copyright">
-                <p>© 2017 NJUST MSC. All rights reserved | Design by <a href="#">NJUST MSC</a></p>
+            <div class="checkbox"><label><input type="checkbox" th:field="*{a24}" value="美工设计">美工设计</label></div>
+            <div class="checkbox"><label><input type="checkbox" th:field="*{a24}" value="编程开发">编程开发</label></div>
+            <div class="checkbox"><label><input type="checkbox" th:field="*{a24}" value="渗透测试">渗透测试</label></div>
+            <div class="checkbox"><label><input type="checkbox" th:field="*{a24}" value="硬核向玩家">硬核向玩家</label></div>
+            <div class="checkbox"><label><input type="checkbox" th:field="*{a24}" value="吐槽役担当">吐槽役担当</label></div>
+            <div class="checkbox"><label><input type="checkbox" th:field="*{a24}" value="水">大自然的搬运工(水)</label></div> -->
+            <div class="" style="color:#D8D8D8;">
+                <label class="checkbox-inline"><input type="checkbox" th:field="*{a24}" value="活动策划">活动策划</label>
+                <label class="checkbox-inline"><input type="checkbox" th:field="*{a24}" value="美工设计">美工设计</label>
+                <label class="checkbox-inline"><input type="checkbox" th:field="*{a24}" value="编程开发">编程开发</label>
+                <label class="checkbox-inline"><input type="checkbox" th:field="*{a24}" value="渗透测试">渗透测试</label>
+                <label class="checkbox-inline"><input type="checkbox" th:field="*{a24}" value="硬核向玩家">硬核向玩家</label>
+                <label class="checkbox-inline"><input type="checkbox" th:field="*{a24}" value="吐槽役担当">吐槽役担当</label>
+                <label class="checkbox-inline"><input type="checkbox" th:field="*{a24}" value="水">大自然的搬运工(水)</label>
             </div>
         </div>
-    </footer>
-    <!-- //footer -->
-    <script src="js/jarallax.js"></script>
-    <script src="js/SmoothScroll.min.js"></script>
-    <script type="text/javascript">
-        /* init Jarallax */
-        $('.jarallax').jarallax({
-            speed: 0.5,
-            imgWidth: 1366,
-            imgHeight: 768
-        })
+        <div class="form-group">
+            <h3>3 * 意向部门</h3>
+            <h5>最想加入的部门</h5>
+            <!--<select th:field="*{a31}" class="form-control" required>-->
+            <!--<option value="美工部">美工部</option>-->
+            <!--<option value="技术部">技术部</option>-->
+            <!--<option value="活动部">活动部</option>-->
+            <!--<option value="新媒体策划部">新媒体策划部</option>-->
+            <!--</select>-->
+            <!-- <div class="checkbox"><label><input type="checkbox" th:field="*{a31}" value="活动策划部">活动策划部</label></div>
 
-    </script>
-    <script src="js/responsiveslides.min.js"></script>
-    <script type="text/javascript" src="js/move-top.js"></script>
-    <script type="text/javascript" src="js/easing.js"></script>
-    <!-- Tabs-JavaScript -->
-    <script src="js/jquery.filterizr.js"></script>
-    <script src="js/controls.js"></script>
-    <script type="text/javascript">
-        $(function () {
-            $('.filtr-container').filterizr();
-        });
+            <div class="checkbox"><label><input type="checkbox" th:field="*{a31}" value="技术支持部">技术支持部(ACM、信息安全、工程、修电脑等)</label></div>
+            <div class="checkbox"><label><input type="checkbox" th:field="*{a31}" value="美工设计部">美工设计部</label></div>
+            <div class="checkbox"><label><input type="checkbox" th:field="*{a31}" value="新媒体策划部">新媒体策划</label></div>
+            <div class="checkbox"><label><input type="checkbox" th:field="*{a31}" value="老干部活动中心">老干部活动中心(仅仅是列出来说明有,别选)</label></div> -->
+            <div class="" style="color:#D8D8D8;">
+                <label class="checkbox-inline"><input type="checkbox" th:field="*{a31}" value="活动策划部">活动策划部</label>
+                <label class="checkbox-inline"><input type="checkbox" th:field="*{a31}" value="技术支持部">技术支持部(ACM、信息安全、工程、修电脑等)</label>
+                <label class="checkbox-inline"><input type="checkbox" th:field="*{a31}" value="美工设计部">美工设计部</label>
+                <label class="checkbox-inline"><input type="checkbox" th:field="*{a31}" value="新媒体策划部">新媒体策划</label>
+                <label class="checkbox-inline"><input type="checkbox" th:field="*{a31}" value="老干部活动中心">老干部活动中心(仅仅是列出来说明有,别选)</label>
+            </div>
+            <h5>描述相关经历</h5>
+            <textarea th:field="*{a32}" class="form-control" rows="3" placeholder="描述相关经历" required></textarea>
+        </div>
+        <button type="submit" id="submit" class="btn btn-primary btn-block" style="max-width:20em;margin:0 auto;">提交</button>
+    </form>
+</div>
 
-    </script>
-    <!-- //Tabs-JavaScript -->
-    <!-- PopUp-Box-JavaScript -->
-    <script src="js/jquery.chocolat.js"></script>
-    <script type="text/javascript">
-        $(function () {
-            $('.filtr-item a').Chocolat();
-        });
+<footer>
+    <div class="container">
+        <div class="copyright">
+            <p>© 2017 NJUST MSC. All rights reserved | Design by <a href="#">NJUST MSC</a></p>
+        </div>
+    </div>
+</footer>
+<!-- //footer -->
+<script src="js/jarallax.js"></script>
+<script src="js/SmoothScroll.min.js"></script>
+<script type="text/javascript">
+    /* init Jarallax */
+    $('.jarallax').jarallax({
+        speed: 0.5,
+        imgWidth: 1366,
+        imgHeight: 768
+    })
 
-    </script>
-    <!-- //PopUp-Box-JavaScript -->
+</script>
+<script src="js/responsiveslides.min.js"></script>
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<!-- Tabs-JavaScript -->
+<script src="js/jquery.filterizr.js"></script>
+<script src="js/controls.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('.filtr-container').filterizr();
+    });
+
+</script>
+<!-- //Tabs-JavaScript -->
+<!-- PopUp-Box-JavaScript -->
+<script src="js/jquery.chocolat.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('.filtr-item a').Chocolat();
+    });
+
+</script>
+<!-- //PopUp-Box-JavaScript -->
 </body>
 
 </html>

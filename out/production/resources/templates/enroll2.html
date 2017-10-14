@@ -50,14 +50,19 @@
           role="form">
         <h1>非大一新生报名</h1>
         <div class="form-group row">
-            <h2>新生报名</h2>
             <h3>1 * 基本问题</h3>
             <div class="col-sm-4">
                 <input type="text" th:field="*{name}" placeholder="姓名" class="form-control" required autofocus>
             </div>
 
             <div class="col-sm-4">
-                <input type="text" th:field="*{birthday}" placeholder="生日" class="form-control" required>
+                <select th:field="*{grade}" class="form-control">
+                    <option value="大一刚入门">大一刚入门</option>
+                    <option value="大二老油条">大二老油条</option>
+                    <option value="大三老腊肉">大三老腊肉</option>
+                    <option value="大四将下架">大四将下架</option>
+                    <option value="烟酒生">烟酒生</option>
+                </select>
             </div>
             <div class="col-sm-4">
                 <!--<input type="text" th:field="*{sex}" placeholder="性别" class="form-control" required>-->
@@ -71,7 +76,7 @@
                 <input type="text" th:field="*{mail}" placeholder="邮箱" class="form-control" required>
             </div>
             <div class="col-sm-6">
-                <input type="text" th:field="*{grade}" placeholder="学院+年级" class="form-control" required>
+                <input type="text" th:field="*{school}" placeholder="学院" class="form-control" required>
             </div>
             <div class="col-sm-6">
                 <input type="text" th:field="*{phone}" placeholder="手机号" class="form-control" required>

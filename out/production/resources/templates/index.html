@@ -43,218 +43,225 @@
 </head>
 
 <body>
-    <div class="banner jarallax">
-        <div class="banner-main">
-            <div class="new_container">
-                <div class="rslides callbacks" id="slider">
-                    <img src="images/3_0.png" alt="" class="media wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms" />
-                </div>
-                <div class="clearfix"> </div>
-                <script src="js/responsiveslides.min.js"></script>
-                <script>
-                    // You can also use "$(window).load(function() {"
-                    $(function () {
-                        // Slideshow 4
-                        $("#slider").responsiveSlides({
-                            auto: true,
-                            pager: true,
-                            nav: true,
-                            speed: 500,
-                            namespace: "callbacks",
-                            before: function () {
-                                $('.events').append("<li>before event fired.</li>");
-                            },
-                            after: function () {
-                                $('.events').append("<li>after event fired.</li>");
-                            }
-                        });
-
+<div class="banner jarallax">
+    <div class="banner-main">
+        <div class="new_container">
+            <div class="rslides callbacks" id="slider">
+                <img src="images/3_0.png" alt="" class="media wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms" />
+            </div>
+            <div class="clearfix"> </div>
+            <script src="js/responsiveslides.min.js"></script>
+            <script>
+                // You can also use "$(window).load(function() {"
+                $(function () {
+                    // Slideshow 4
+                    $("#slider").responsiveSlides({
+                        auto: true,
+                        pager: true,
+                        nav: true,
+                        speed: 500,
+                        namespace: "callbacks",
+                        before: function () {
+                            $('.events').append("<li>before event fired.</li>");
+                        },
+                        after: function () {
+                            $('.events').append("<li>after event fired.</li>");
+                        }
                     });
-                </script>
-            </div>
-        </div>
-    </div>
-    <!-- MSC简介 -->
-    <div class="container-fluid marketing placeholders">
-        <h2 class="title wow fadeInDown" data-wow-delay=".3s">ABOUT <img src="images/MSC.png"></h2>
-        <hr>
-        <div class="placeholder">
-            <p class="wow fadeInDown" data-wow-delay=".5s">微软学生俱乐部"（MICROSOFT STUDENT CLUB, 简称 MSC）是微软亚洲研究院 与高校合作培养人才的一种探索</p>
-            <p class="wow fadeInDown" data-wow-delay=".5s">自 2000 年 10 月 15 日第一个俱乐部在四川大学成立，至今全国已有34所高校拥有了自己的 MSC</p>
-            <p class="wow fadeInDown" data-wow-delay=".5s">南京理工大学微软学生俱乐部成立于2001年，作为以技术为导向的俱乐部，我们鼓励大家交流自己的爱好,</p>
-            <p class="wow fadeInDown" data-wow-delay=".5s">分享微软亚研的技术，和俱乐部共同成长</p>
 
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-sm-6 col-xs-6 hidden-xs view">
-                <img src="images/1.jpg" class="img-responsive img-rounded">
-            </div>
-            <div class="col-md-6 col-sm-6 col-xs-6 hidden-xs view">
-                <img src="images/2.jpg" class="img-responsive img-rounded">
-            </div>
-        </div>
-        <!-- //MSC简介 -->
-    </div>
-    <!-- 部门简介 -->
-    <div class="jarallax team">
-        <div class="team-dot">
-            <div class="container-fluid marketing placeholders">
-                <h2 class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">部门介绍</h2>
-                <hr>
-                <div class="row">
-                    <div class="col-sm-6 col-md-3 col-lg-3 placeholder">
-                        <img class="img-circle wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms" src="images/p1.jpg" width="140"
-                            height="140">
-                        <h2 class="img-circle wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">活动部</h2>
-                        <p class="img-circle wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="600ms">负责组【操】织【心】各种活动</p>
-                        <p class="img-circle wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="600ms">有想法 会搞事 吃苦耐劳 </p>
-                        <p class="img-circle wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">开会喝奶茶</p>
-                    </div>
-                    <div class="col-sm-6 col-md-3 col-lg-3 placeholder">
-                        <img class="img-circle wow fadeInRight animated" data-wow-duration="500ms" data-wow-delay="300ms" src="images/art.jpg" width="140"
-                            height="140">
-                        <h2 class="img-circle wow fadeInRIght animated" data-wow-duration="500ms" data-wow-delay="300ms">美工部</h2>
-                        <p class="img-circle wow fadeInRIght animated" data-wow-duration="500ms" data-wow-delay="600ms">日常活动做海报剪视频，主要负责各种宣传和周边的绘制和设计工作</p>
-                        <p class="img-circle wow fadeInRIght animated" data-wow-duration="500ms" data-wow-delay="600ms">大家都是艺【深】术【井】家【冰】</p>
-                        <p class="img-circle wow fadeInRIght animated" data-wow-duration="500ms" data-wow-delay="600ms">平时有各种锻炼技术的机会</p>
-                        <p class="img-circle wow fadeInRIght animated" data-wow-duration="500ms" data-wow-delay="600ms">还能和漂亮的小哥哥小姐姐一起玩耍</p>
-                    </div>
-                    <div class="col-sm-6 col-md-3 col-lg-3 placeholder">
-                        <img class="img-circle wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms" src="images/tech.jpg" width="140"
-                            height="140">
-                        <h2 class="img-circle wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">技术部</h2>
-                        <p class="img-circle wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="600ms">据说是社团的灵魂部门，主要负责板砖和接锅</p>
-                        <p class="img-circle wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="600ms">由一群渴望力量的少年少女们组成</p>
-                        <p class="img-circle wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="600ms">真诚希望每一个对技术有热情和技巧的同学加入</p>
-                    </div>
-                    <div class="col-sm-6 col-md-3 col-lg-3 placeholder">
-                        <img class="img-circle wow fadeInRight animated" data-wow-duration="500ms" data-wow-delay="300ms" src="images/media.jpg"
-                            width="140" height="140">
-                        <h2 class="img-circle wow fadeInRight animated" data-wow-duration="500ms" data-wow-delay="300ms">新媒体策划部</h2>
-                        <p class="img-circle wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="600ms">给俱乐部拍摄活动照片</p>
-                        <p class="img-circle wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="600ms">给俱乐部网站和公众号写新闻稿</p>
-                        <p class="img-circle wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="600ms"> </p>
-                    </div>
-                </div>
-            </div>
+                });
+            </script>
         </div>
     </div>
-    <!-- //部门简介 -->
-    <!-- 活动介绍 -->
-    <div class="container-fluid marketing placeholders">
-        <h2 class="title wow fadeInDown" data-wow-delay=".3s">活动介绍</h2>
-        <hr class="title wow fadeInDown" data-wow-delay=".3s">
-        <div class="row">
-            <div class="col-sm-6 col-md-6 col-lg-3 placeholder">
-                <img src="images/p1.jpg" class="img-responsive img-rounded media wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">
-                <h3 class="media wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">技术沙龙</h3>
-                <p class="wow fadeInDown" data-wow-delay=".5s">技术沙龙 俱乐部定期组织技术讲座面向大佬和小白</p>
-            </div>
-            <div class="col-sm-6 col-md-6 col-lg-3 placeholder">
-                <img src="images/p2.jpg" class="img-responsive img-roundedmedia wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">
-                <h3 class="media wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">HACKATHON</h3>
-                <p class="wow fadeInDown" data-wow-delay=".5s">hackathon 是南京四校MSC联合举办的创意比赛 在两天的时间里完成一个脑洞</p>
-            </div>
-            <div class="col-sm-6 col-md-6 col-lg-3 placeholder">
-                <img src="images/p3.jpg" class="img-responsive img-rounded media wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">
-                <h3 class="media wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">微软学生夏令营</h3>
-                <p class="wow fadeInDown" data-wow-delay=".5s">微软学生夏令营 邀请全国msc优秀会员参加</p>
-            </div>
-            <div class="col-sm-6 col-md-6 col-lg-3 placeholder">
-                <img src="images/p4.jpg" class="img-responsive img-rounded media wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">
-                <h3 class="media wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">奔跑吧 MSC</h3>
-                <p class="wow fadeInDown" data-wow-delay=".5s">奔跑吧 MSC 是一个即将开始的大型户外探险活动</p>
-            </div>
-        </div>
-    </div>
-    <!-- 职位招募 -->
-    <div class="jarallax team">
-        <div class="team-dot">
-            <div class="container-fluid marketing placeholders">
-                <h2 class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">职位招募中（面向大二及以上年级同学）</h2>
-                <hr>
-                <div class="row">
-                    <div class="col-sm-6 col-md-6 col-lg-6 placeholder">
-                        <img class="img-circle wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms" src="images/tech1.jpg" width="140"
-                            height="140">
-                        <h2 class="img-circle wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">技术部 项目管理人（group leader）</h2>
-                        <p class="img-circle wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="600ms">微软亚洲研究院即将启动面对学生的项目</p>
-                        <p class="img-circle wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="600ms">学生可以自己组成小组完成微软发布的项目</p>
-                        <p class="img-circle wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="600ms">招募有项目经验的同学 带领同学完成项目</p>
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-6 placeholder">
-                        <img class="img-circle wow fadeInRight animated" data-wow-duration="500ms" data-wow-delay="300ms" src="images/media1.jpg"
-                            width="140" height="140">
-                        <h2 class="img-circle wow fadeInRight animated" data-wow-duration="500ms" data-wow-delay="300ms">新媒体策划部部长</h2>
-                        <p class="img-circle wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="600ms">rt 策划部部长一职目前空缺</p>
-                        <p class="img-circle wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="600ms">管理策划部</p>
-                        <p class="img-circle wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="600ms">欢迎有策划和管理公众号的经验的同学</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- //职位招募 -->
-    <!-- //活动介绍 -->
-    <div class="contact-info jarallax" id="enroll">
-        <div class="contact-info-grids">
-            <div class="container-fluid marketing placeholders">
-                <h2 class="wow fadeInDown" data-wow-delay=".5s">快来加入我们吧！</h2>
-                <hr>
-                <div class="placeholder">
-                    <p class="media wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">我们期待 有创意 有技术 有热情的同学加入</p>
-                    <p class="media wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">有技术，并且热衷于动手实现技术的同学</p>
-                    <p class="media wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">会画画，会PS 或者能使用Adobe大家族的同学</p>
-                    <p class="media wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">有脑洞，喜欢搞事情的同学 </p>
-                    <p class="media wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">加入MSC 和我们一起成长！ </p>
-                </div>
-                <div class="placeholder">
-                    <p><a class="btn" href="enroll1.html" role="botton">大一新生报名</a>&nbsp;&nbsp;<a class="btn" href="enroll2.html"
-                            role="botton">非新生报名</a></p>
-                </div>
-            </div>
-        </div>
-        <!-- //MSC简介 -->
-    </div>
+</div>
+<!-- MSC简介 -->
+<div class="container-fluid marketing placeholders">
+    <h2 class="title wow fadeInDown" data-wow-delay=".3s">ABOUT <img src="images/MSC.png"></h2>
+    <hr>
+    <div class="placeholder">
+        <p class="wow fadeInDown" data-wow-delay=".5s">微软学生俱乐部"（MICROSOFT STUDENT CLUB, 简称 MSC）是微软亚洲研究院 与高校合作培养人才的一种探索</p>
+        <p class="wow fadeInDown" data-wow-delay=".5s">自 2000 年 10 月 15 日第一个俱乐部在四川大学成立，至今全国已有34所高校拥有了自己的 MSC</p>
+        <p class="wow fadeInDown" data-wow-delay=".5s">南京理工大学微软学生俱乐部成立于2001年，作为以技术为导向的俱乐部，我们鼓励大家交流自己的爱好,</p>
+        <p class="wow fadeInDown" data-wow-delay=".5s">分享微软亚研的技术，和俱乐部共同成长</p>
 
-    <footer>
-        <div class="container">
-            <div class="copyright">
-                <p>© 2017 NJUST MSC. All rights reserved | Design by <a href="#">NJUST MSC</a></p>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-6 hidden-xs view">
+            <img src="images/1.jpg" class="img-responsive img-rounded">
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-6 hidden-xs view">
+            <img src="images/2.jpg" class="img-responsive img-rounded">
+        </div>
+    </div>
+    <!-- //MSC简介 -->
+</div>
+<!-- 部门简介 -->
+<div class="jarallax team">
+    <div class="team-dot">
+        <div class="container-fluid marketing placeholders">
+            <h2 class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">部门介绍</h2>
+            <hr>
+            <div class="row">
+                <div class="col-sm-6 col-md-3 col-lg-3 placeholder">
+                    <img class="img-circle wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms" src="images/p1.jpg" width="140"
+                         height="140">
+                    <h2 class="img-circle wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">活动部</h2>
+                    <p class="img-circle wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="600ms">负责组【操】织【心】各种活动</p>
+                    <p class="img-circle wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="600ms">有想法 会搞事 吃苦耐劳 </p>
+                    <p class="img-circle wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">开会喝奶茶</p>
+                </div>
+                <div class="col-sm-6 col-md-3 col-lg-3 placeholder">
+                    <img class="img-circle wow fadeInRight animated" data-wow-duration="500ms" data-wow-delay="300ms" src="images/art.jpg" width="140"
+                         height="140">
+                    <h2 class="img-circle wow fadeInRIght animated" data-wow-duration="500ms" data-wow-delay="300ms">美工部</h2>
+                    <p class="img-circle wow fadeInRIght animated" data-wow-duration="500ms" data-wow-delay="600ms">日常活动做海报剪视频，主要负责各种宣传和周边的绘制和设计工作</p>
+                    <p class="img-circle wow fadeInRIght animated" data-wow-duration="500ms" data-wow-delay="600ms">大家都是艺【深】术【井】家【冰】</p>
+                    <p class="img-circle wow fadeInRIght animated" data-wow-duration="500ms" data-wow-delay="600ms">平时有各种锻炼技术的机会</p>
+                    <p class="img-circle wow fadeInRIght animated" data-wow-duration="500ms" data-wow-delay="600ms">还能和漂亮的小哥哥小姐姐一起玩耍</p>
+                </div>
+                <div class="col-sm-6 col-md-3 col-lg-3 placeholder">
+                    <img class="img-circle wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms" src="images/tech.jpg" width="140"
+                         height="140">
+                    <h2 class="img-circle wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">技术部</h2>
+                    <p class="img-circle wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="600ms">据说是社团的灵魂部门，主要负责板砖和接锅</p>
+                    <p class="img-circle wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="600ms">由一群渴望力量的少年少女们组成</p>
+                    <p class="img-circle wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="600ms">真诚希望每一个对技术有热情和技巧的同学加入</p>
+                </div>
+                <div class="col-sm-6 col-md-3 col-lg-3 placeholder">
+                    <img class="img-circle wow fadeInRight animated" data-wow-duration="500ms" data-wow-delay="300ms" src="images/media.jpg"
+                         width="140" height="140">
+                    <h2 class="img-circle wow fadeInRight animated" data-wow-duration="500ms" data-wow-delay="300ms">新媒体策划部</h2>
+                    <p class="img-circle wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="600ms">给俱乐部拍摄活动照片</p>
+                    <p class="img-circle wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="600ms">给俱乐部网站和公众号写新闻稿</p>
+                    <p class="img-circle wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="600ms"> </p>
+                </div>
             </div>
         </div>
-    </footer>
-    <!-- //footer -->
-    <script src="js/jarallax.js"></script>
-    <script src="js/SmoothScroll.min.js"></script>
-    <script type="text/javascript">
-                    /* init Jarallax */
-                    $('.jarallax').jarallax({
-                        speed: 0.5,
-                        imgWidth: 1366,
-                        imgHeight: 768
-                    })
-    </script>
-    <script src="js/responsiveslides.min.js"></script>
-    <script type="text/javascript" src="js/move-top.js"></script>
-    <script type="text/javascript" src="js/easing.js"></script>
-    <!-- Tabs-JavaScript -->
-    <script src="js/jquery.filterizr.js"></script>
-    <script src="js/controls.js"></script>
-    <script type="text/javascript">
-                    $(function () {
-                        $('.filtr-container').filterizr();
-                    });
-    </script>
-    <!-- //Tabs-JavaScript -->
-    <!-- PopUp-Box-JavaScript -->
-    <script src="js/jquery.chocolat.js"></script>
-    <script type="text/javascript">
-        $(function () {
-            $('.filtr-item a').Chocolat();
-        });
-    </script>
-    <!-- //PopUp-Box-JavaScript -->
+    </div>
+</div>
+<!-- //部门简介 -->
+<!-- 活动介绍 -->
+<div class="container-fluid marketing placeholders">
+    <h2 class="title wow fadeInDown" data-wow-delay=".3s">活动介绍</h2>
+    <hr class="title wow fadeInDown" data-wow-delay=".3s">
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-3 placeholder">
+            <img src="images/p1.jpg" class="img-responsive img-rounded media wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">
+            <h3 class="media wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">技术沙龙</h3>
+            <p class="wow fadeInDown" data-wow-delay=".5s">技术沙龙 俱乐部定期组织技术讲座面向大佬和小白</p>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 placeholder">
+            <img src="images/p2.jpg" class="img-responsive img-roundedmedia wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">
+            <h3 class="media wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">HACKATHON</h3>
+            <p class="wow fadeInDown" data-wow-delay=".5s">hackathon 是南京四校MSC联合举办的创意比赛 在两天的时间里完成一个脑洞</p>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 placeholder">
+            <img src="images/p3.jpg" class="img-responsive img-rounded media wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">
+            <h3 class="media wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">微软学生夏令营</h3>
+            <p class="wow fadeInDown" data-wow-delay=".5s">微软学生夏令营 邀请全国msc优秀会员参加</p>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 placeholder">
+            <img src="images/p4.jpg" class="img-responsive img-rounded media wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">
+            <h3 class="media wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">奔跑吧 MSC</h3>
+            <p class="wow fadeInDown" data-wow-delay=".5s">奔跑吧 MSC 是一个即将开始的大型户外探险活动</p>
+        </div>
+    </div>
+</div>
+<!-- 职位招募 -->
+<div class="jarallax team">
+    <div class="team-dot">
+        <div class="container-fluid marketing placeholders">
+            <h2 class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">职位招募中（面向大二及以上年级同学）</h2>
+            <hr>
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6 placeholder">
+                    <img class="img-circle wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms" src="images/tech1.jpg" width="140"
+                         height="140">
+                    <h2 class="img-circle wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">技术部 项目管理人（group leader）</h2>
+                    <p class="img-circle wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="600ms">微软亚洲研究院即将启动面对学生的项目</p>
+                    <p class="img-circle wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="600ms">学生可以自己组成小组完成微软发布的项目</p>
+                    <p class="img-circle wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="600ms">招募有项目经验的同学 带领同学完成项目</p>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6 placeholder">
+                    <img class="img-circle wow fadeInRight animated" data-wow-duration="500ms" data-wow-delay="300ms" src="images/media1.jpg"
+                         width="140" height="140">
+                    <h2 class="img-circle wow fadeInRight animated" data-wow-duration="500ms" data-wow-delay="300ms">新媒体策划部部长</h2>
+                    <p class="img-circle wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="600ms">rt 策划部部长一职目前空缺</p>
+                    <p class="img-circle wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="600ms">管理策划部</p>
+                    <p class="img-circle wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="600ms">欢迎有策划和管理公众号的经验的同学</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //职位招募 -->
+<!-- //活动介绍 -->
+<div class="contact-info jarallax" id="enroll">
+    <div class="contact-info-grids">
+        <div class="container-fluid marketing placeholders">
+            <h2 class="wow fadeInDown" data-wow-delay=".5s">快来加入我们吧！</h2>
+            <hr>
+            <div class="placeholder">
+                <p class="media wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">我们期待 有创意 有技术 有热情的同学加入</p>
+                <p class="media wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">有技术，并且热衷于动手实现技术的同学</p>
+                <p class="media wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">会画画，会PS 或者能使用Adobe大家族的同学</p>
+                <p class="media wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">有脑洞，喜欢搞事情的同学 </p>
+                <p class="media wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">加入MSC 和我们一起成长！ </p>
+                <p class="media wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">我们的展位在喷泉广场兵器博物馆对面，欢迎来玩~</p>
+
+            </div>
+            <div class="placeholder">
+                <p><a class="btn" href="#" role="botton" onclick="fun()">大一新生报名</a>&nbsp;&nbsp;<a class="btn" href="#"
+                                                                                                  role="botton" onclick="fun()">非新生报名</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- //MSC简介 -->
+</div>
+
+<footer>
+    <div class="container">
+        <div class="copyright">
+            <p>© 2017 NJUST MSC. All rights reserved | Design by <a href="#">NJUST MSC</a></p>
+        </div>
+    </div>
+</footer>
+<!-- //footer -->
+<script src="js/jarallax.js"></script>
+<script src="js/SmoothScroll.min.js"></script>
+<script type="text/javascript">
+    /* init Jarallax */
+    $('.jarallax').jarallax({
+        speed: 0.5,
+        imgWidth: 1366,
+        imgHeight: 768
+    })
+</script>
+<script src="js/responsiveslides.min.js"></script>
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<!-- Tabs-JavaScript -->
+<script src="js/jquery.filterizr.js"></script>
+<script src="js/controls.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('.filtr-container').filterizr();
+    });
+</script>
+<!-- //Tabs-JavaScript -->
+<!-- PopUp-Box-JavaScript -->
+<script src="js/jquery.chocolat.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('.filtr-item a').Chocolat();
+    });
+</script>
+<!-- //PopUp-Box-JavaScript -->
+<script>
+    function fun(){
+        alert("百团大战开始后可以报名,前50位报名的同学有小礼品哟~");
+    }
+</script>
 </body>
 
 </html>

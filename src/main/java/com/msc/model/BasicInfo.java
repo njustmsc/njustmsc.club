@@ -4,7 +4,7 @@ public class BasicInfo {
     private Integer id;
     private String name;
     private String sex;
-    private String birthday;
+    private String school;
     private String mail;
     private String grade;
     private String phone;
@@ -35,12 +35,12 @@ public class BasicInfo {
         this.sex = sex;
     }
 
-    public String getBirthday() {
-        return birthday;
+    public String getSchool() {
+        return school;
     }
 
-    public void setBirthday(String birthday) {
-        this.birthday = birthday;
+    public void setSchool(String school) {
+        this.school = school;
     }
 
     public String getMail() {
